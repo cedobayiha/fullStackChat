@@ -1,8 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const path = require("path")
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require("path");
 module.exports = {
   devtool: "source-map",
   devServer: {
+    host: "10.65.106.58",
+    port: 8080,
     overlay: {
       warnings: true,
       errors: true
@@ -58,4 +60,4 @@ module.exports = {
     javascript: "./src/index.js",
     html: "./public/index.html"
   }
-}
+};
