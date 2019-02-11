@@ -22,7 +22,7 @@ class UnconnectedChat extends Component {
   }
   componentDidMount() {
     let updater = () => {
-      return fetch("http://10.65.106.58:4000/message")
+      return fetch("http://localhost:4000/message")
         .then(function(x) {
           return x.text();
         })
@@ -46,7 +46,7 @@ class UnconnectedChat extends Component {
       msg: this.state.message,
       sessionId: this.props.sid
     });
-    fetch("http://10.65.106.58:4000/newmessage", {
+    fetch("http://localhost:4000/newmessage", {
       method: "POST",
       body: c,
       credentials: "include"
@@ -108,7 +108,7 @@ class Signup extends Component {
       username: this.state.username,
       password: this.state.password
     });
-    fetch("http://10.65.106.58:4000/signup", { method: "POST", body: c });
+    fetch("http://localhost:4000/signup", { method: "POST", body: c });
   }
   render() {
     return (
@@ -149,7 +149,7 @@ class UnconnectedLogin extends Component {
       username: this.state.username,
       password: this.state.password
     });
-    fetch("http://10.65.106.58:4000/login", {
+    fetch("http://localhost:4000/login", {
       method: "POST",
       body: c,
       credentials: "include"

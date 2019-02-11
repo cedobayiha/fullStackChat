@@ -3,8 +3,8 @@ const path = require("path");
 module.exports = {
   devtool: "source-map",
   devServer: {
-    host: "10.65.106.58",
-    port: 8080,
+    host: "localhost",
+    port: 4000,
     overlay: {
       warnings: true,
       errors: true
